@@ -9,12 +9,12 @@ dotenv.config();
 const app = express();
 app.use(express.json());
 
-// 🔗 Test route
+// Test route
 app.get("/", (req, res) => {
-  res.send("URL Shortener API is running 🚀");
+  res.send("URL Shortener API is running ");
 });
 
-// 🧩 Create short URL
+// Create short URL
 app.post("/shorten", async (req, res) => {
   const { originalUrl } = req.body;
   if (!originalUrl) return res.status(400).json({ error: "Missing URL" });
@@ -28,7 +28,7 @@ app.post("/shorten", async (req, res) => {
   res.json({ shortUrl: `http://localhost:${process.env.PORT}/${code}` });
 });
 
-// 🌍 Redirect
+// Redirect
 app.get("/:code", async (req, res) => {
   const { code } = req.params;
   const result = await db.select().from(urls).where(eq(urls.code, code));
