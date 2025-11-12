@@ -25,4 +25,5 @@ git clone https://github.com/tinoMukaro/short_urls.git
 cd short_urls
 //Make sure Docker is installed and running
 docker compose up --build
-
+```
+and hey if youre not lazy help me by creating a small UI to link with this url shortner🥲
