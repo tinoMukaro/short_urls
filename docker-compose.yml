@@ -23,7 +23,6 @@ services:
       DATABASE_URL: postgres://postgres:password@db:5432/shortener
     volumes:
       - .:/app
-    command: npm run dev
 
 volumes:
   db_data:

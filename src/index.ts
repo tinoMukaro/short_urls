@@ -1,7 +1,7 @@
 import express from "express";
 import dotenv from "dotenv";
-import { db } from "./db/index";
-import { urls } from "./db/schema";
+import { db } from "./db/index.js";
+import { urls } from "./db/schema.js";
 import { eq } from "drizzle-orm";
 
 dotenv.config();
