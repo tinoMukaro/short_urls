@@ -1,14 +1,11 @@
+import UrlShortener from './components/UrlShortener.jsx';
 
 function App() {
- 
   return (
-    <>
-      <h1 class="text-3xl font-bold">
-    Hello world!
-     </h1>
-      
-    </>
-  )
+    <div className="min-h-screen bg-gray-50">
+      <UrlShortener />
+    </div>
+  );
 }
 
-export default App
+export default App;
