@@ -1,23 +1,26 @@
-# Use Node LTS version
-FROM node:18-alpine
 
-# Set working directory
+FROM node:20-alpine
+
+
 WORKDIR /app
 
-# Copy package files
+
 COPY package*.json ./
 
-# Install dependencies
+
 RUN npm install
 
-# Copy all source files
+
 COPY . .
 
-# Build TypeScript code
+
 RUN npm run build
 
-# Expose port
+
+RUN ls -la dist/
+
+
 EXPOSE 3000
 
-# Start the app
-CMD ["npm", "start"]
+
+CMD ["node", "dist/index.js"]  # CHANGE THIS LINE

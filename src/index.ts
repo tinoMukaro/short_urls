@@ -3,11 +3,15 @@ import dotenv from "dotenv";
 import { db } from "./db/index.js";
 import { urls } from "./db/schema.js";
 import { eq } from "drizzle-orm";
+import cors from "cors";
+
 
 dotenv.config();
 
 const app = express();
 app.use(express.json());
+app.use(cors());
+
 
 // Test route
 app.get("/", (req, res) => {
