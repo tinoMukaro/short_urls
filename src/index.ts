@@ -3,7 +3,7 @@ import dotenv from "dotenv";
 import { db } from "./db/index";
 import { urls } from "./db/schema";
 import { eq } from "drizzle-orm";
-import cors from "cors";
+import cors from 'cors';
 
 
 dotenv.config();
