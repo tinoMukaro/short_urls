@@ -4,3 +4,4 @@ npm-debug.log
 frontend/node_modules/
 
 .env
+dist/

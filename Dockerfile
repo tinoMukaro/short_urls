@@ -23,4 +23,4 @@ RUN ls -la dist/
 EXPOSE 3000
 
 
-CMD ["node", "dist/index.js"]  # CHANGE THIS LINE
+CMD ["node", "dist/index.js"]  
