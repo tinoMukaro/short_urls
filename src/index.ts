@@ -29,7 +29,7 @@ app.post("/shorten", async (req, res) => {
   // insert into DB
   await db.insert(urls).values({ code, originalUrl });
 
-  res.json({ shortUrl: `http://localhost:${process.env.PORT}/${code}` });
+  res.json({ shortUrl: `http://localhost:4000/${code}` });
 });
 
 // Redirect
